@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 --- 
 
 title       : Hierarchical Clustering on mtcars
 subtitle    : A tree structured machine learning algorithm on a dataset
+=======
+---
+title       : Hierarchical Clustering on mtcars
+subtitle    : 
+>>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
 author      : 
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -9,10 +15,18 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
+<<<<<<< HEAD
 knit        : slidify::knit2slides  
 
 ---
 
+=======
+knit        : slidify::knit2slides
+
+---
+
+
+>>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
 * One of the important clustering algorithms is Hierarchical Clustering. The idea is to build a tree where the leaves of the trees are observations.
 
 
@@ -31,13 +45,20 @@ Here is the r code to generate the plot with euclidean distance over complete me
 
 
 ```r
+<<<<<<< HEAD
    d <- dist(as.matrix(mtcars),  method = "euclidean")
+=======
+   #Compute the distance
+   d <- dist(as.matrix(mtcars),  method = "euclidean")
+   # Use complete method to build tree
+>>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
    hc <-  hclust(d, method="complete") 
    plot(hc)
 ```
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
 
+<<<<<<< HEAD
 --- 
 
 Another popular method is average. Here is the plot with maximum distance metric:
@@ -47,11 +68,22 @@ Another popular method is average. Here is the plot with maximum distance metric
    d <- dist(as.matrix(mtcars),  method = "maximum")
    hc <-  hclust(d, method="average") 
    plot(hc)
+=======
+---
+
+We can specify a number of clusters, for instance with 7 clusters a plot looks like this
+
+
+```r
+plot(hc)
+rect.hclust(hc, k, border="red")
+>>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
 ```
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
 
 ---
+<<<<<<< HEAD
 
 We can specify a number of clusters, for instance with 17 clusters on single method a plot looks like this
 
@@ -65,3 +97,15 @@ rect.hclust(hc, 17, border="red")
 
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) 
 
+=======
+Another popular method is average. Here is the plot with maximum distance metric:
+
+
+```r
+   d <- dist(as.matrix(mtcars),  method = "maximum")
+   hc <-  hclust(d, method="average") 
+   plot(hc)
+```
+
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) 
+>>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
