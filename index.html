@@ -13,12 +13,8 @@
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-<<<<<<< HEAD
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
-=======
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
->>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
@@ -37,11 +33,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Hierarchical Clustering on mtcars</h1>
-<<<<<<< HEAD
     <h2>A tree structured machine learning algorithm on a dataset</h2>
-=======
-    <h2></h2>
->>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
     <p><br/></p>
   </hgroup>
   <article></article>  
@@ -67,13 +59,7 @@
   <article data-timings="">
     <p>Here is the r code to generate the plot with euclidean distance over complete method:</p>
 
-<<<<<<< HEAD
 <pre><code class="r">   d &lt;- dist(as.matrix(mtcars),  method = &quot;euclidean&quot;)
-=======
-<pre><code class="r">   #Compute the distance
-   d &lt;- dist(as.matrix(mtcars),  method = &quot;euclidean&quot;)
-   # Use complete method to build tree
->>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
    hc &lt;-  hclust(d, method=&quot;complete&quot;) 
    plot(hc)
 </code></pre>
@@ -86,18 +72,11 @@
 
 <slide class="" id="slide-3" style="background:;">
   <article data-timings="">
-<<<<<<< HEAD
     <p>Another popular method is average. Here is the plot with maximum distance metric:</p>
 
 <pre><code class="r">   d &lt;- dist(as.matrix(mtcars),  method = &quot;maximum&quot;)
    hc &lt;-  hclust(d, method=&quot;average&quot;) 
    plot(hc)
-=======
-    <p>We can specify a number of clusters, for instance with 7 clusters a plot looks like this</p>
-
-<pre><code class="r">plot(hc)
-rect.hclust(hc, k, border=&quot;red&quot;)
->>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
 </code></pre>
 
 <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
@@ -108,20 +87,12 @@ rect.hclust(hc, k, border=&quot;red&quot;)
 
 <slide class="" id="slide-4" style="background:;">
   <article data-timings="">
-<<<<<<< HEAD
     <p>We can specify a number of clusters, for instance with 17 clusters on single method a plot looks like this</p>
 
 <pre><code class="r">d &lt;- dist(as.matrix(mtcars),  method = &quot;euclidean&quot;)
 hc &lt;-  hclust(d, method=&quot;single&quot;) 
 plot(hc)
 rect.hclust(hc, 17, border=&quot;red&quot;)
-=======
-    <p>Another popular method is average. Here is the plot with maximum distance metric:</p>
-
-<pre><code class="r">   d &lt;- dist(as.matrix(mtcars),  method = &quot;maximum&quot;)
-   hc &lt;-  hclust(d, method=&quot;average&quot;) 
-   plot(hc)
->>>>>>> 8a50817be59d65f959cd506996a9b82f1dbb7c42
 </code></pre>
 
 <p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
